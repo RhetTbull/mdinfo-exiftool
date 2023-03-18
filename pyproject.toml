@@ -1,0 +1,25 @@
+[project]
+name = "mdinfo-exiftool"
+authors = [{ name = "Rhet Turnbull", email = "rturnbull+git@gmail.com" }]
+description = "Exiftool plugin for mdinfo"
+requires-python = ">=3.9"
+keywords = ["exiftool", "mdinfo", "metadata", "cli", "plugin"]
+license = { text = "MIT License" }
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["mdinfo"]
+dynamic = ["version", "readme"]
+
+[tool.setuptools.dynamic]
+version = { attr = "mdinfo_exiftool.__version__" }
+readme = { file = "README.md", encoding = "utf-8" }
+
+[build-system]
+# mdinfo must be included in requires for install of the plugin to work
+requires = ["setuptools", "setuptools-scm", "wheel", "mdinfo"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = ["pytest", "bump2version", "cogapp", "freezegun", "doit", "build"]
+
+[project.entry-points.mdinfo]
+exiftool = "mdinfo_exiftool"
