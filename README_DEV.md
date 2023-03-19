@@ -6,16 +6,6 @@ These are notes to remind me how to do things on this project.
 
 pip install -e ".[dev]"
 
-mdinfo-exiftool uses [poetry](https://python-poetry.org/) for dependency management.
-
-Install poetry:
-
-    `pip install poetry`
-
-To install the dependencies, run:
-
-    `poetry install`
-
 ## Building
 
 mdinfo-exiftool uses [doit](https://pydoit.org/) for building.
@@ -29,8 +19,8 @@ To build the project, run:
 mdinfo-exiftool uses [pytest](https://docs.pytest.org/en/stable/) for testing.
 The test suite can be run with the following command:
 
-    `poetry run pytest`
-    
+    `pytest`
+
 or
 
     `doit test`
