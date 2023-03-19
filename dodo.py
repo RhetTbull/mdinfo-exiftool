@@ -6,6 +6,11 @@ def task_update_readme():
     return {"actions": ["cog -r README.md"]}
 
 
+def task_convert_readme():
+    """Convert README.md to README.rst because I can't #@%^ figure out how to get build to use markdown from pyproject.toml"""
+    return {"actions": ["m2r2 --overwrite README.md"]}
+
+
 def task_test():
     """Run tests"""
     return {"actions": ["pytest"]}
