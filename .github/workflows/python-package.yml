@@ -23,9 +23,12 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install brew
-      run: |
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    - name: Install exiftool
+      uses: ConorMacBride/install-package@v1
+      with:
+          brew: exiftool
+          apt: exiftool
+          choco: exiftool
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
