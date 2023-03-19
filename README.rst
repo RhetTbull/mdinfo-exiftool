@@ -27,22 +27,12 @@ Template Help
 -------------
 
 
-.. raw:: html
+Photo and video files (and other files supported by exiftool)
+------------------------------------------------------------
 
-   <!-- [[[cog
-   import cog
-   from mdinfo_exiftool import get_markdown_help 
-   cog.out(
-       "\n{}\n".format(get_markdown_help())
-   )
-   ]]] -->
+``{exiftool}``
 
-
-
-**Photo and video files (and other files supported by exiftool)**
-| Field | Description                                                                 |
-| - | --------------------------------------------------------------------------- |
-| {exiftool} | Format: '{exiftool:GROUP:TAGNAME}'; use exiftool (https://exiftool.org) to extract metadata, in form GROUP:TAGNAME or TAGNAME, from image. E.g. '{exiftool:Make}' to get camera make, or {exiftool:IPTC:Keywords} to extract keywords. See https://exiftool.org/TagNames/ for list of valid tag names.  Group name is optional (e.g. EXIF, IPTC, etc) but if specified, should be the same as used in ``exiftool -G``\ , e.g. '{exiftool:EXIF:Make}'. exiftool must be installed in the path to use this template field (https://exiftool.org/). |
+Format: ``{exiftool:GROUP:TAGNAME}``; use exiftool (https://exiftool.org) to extract metadata, in form GROUP:TAGNAME or TAGNAME, from image. E.g. ``{exiftool:Make}`` to get camera make, or ``{exiftool:IPTC:Keywords}`` to extract keywords. See https://exiftool.org/TagNames/ for list of valid tag names.  Group name is optional (e.g. EXIF, IPTC, etc) but if specified, should be the same as used in ``exiftool -G``\ , e.g. ``{exiftool:EXIF:Make}``. exiftool must be installed in the path to use this template field (https://exiftool.org/).
 
 The ``{exiftool}`` template uses the third-party exiftool app (https://exiftool.org) to extract metadata from photo and video files.
 
@@ -86,10 +76,3 @@ The following attributes are supported:
      - 2-digit second, e.g. 30
    * - strftime
      - Apply strftime template to date/time. Should be used in form {created.strftime,TEMPLATE} where TEMPLATE is a valid strftime template, e.g. {created.strftime,%Y-%U} would result in year-week number of year: '2020-23'. If used with no template will return null value. See https://strftime.org/ for help on strftime templates.
-
-
-
-.. raw:: html
-
-   <!-- [[[end]]] -->
-

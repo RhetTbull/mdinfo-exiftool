@@ -1,6 +1,7 @@
 [project]
 name = "mdinfo-exiftool"
-dynamic = ["version", "readme"]
+dynamic = ["version"]
+# dynamic = ["version", "readme"]
 authors = [{ name = "Rhet Turnbull", email = "rturnbull+git@gmail.com" }]
 description = "Exiftool plugin for mdinfo"
 requires-python = ">=3.9"
@@ -9,9 +10,13 @@ license = { text = "MIT License" }
 classifiers = ["Programming Language :: Python :: 3"]
 dependencies = ["mdinfo"]
 
+[project.urls]
+homepage = "https://github.com/RhetTbull/mdinfo-exiftool"
+repository = "https://github.com/RhetTbull/mdinfo-exiftool"
+
 [tool.setuptools.dynamic]
 version = { attr = "mdinfo_exiftool.__version__" }
-readme = { file = "README.rst", encoding = "utf-8" }
+# readme = { file = ["README.rst"] }
 
 [build-system]
 # mdinfo must be included in requires for install of the plugin to work
