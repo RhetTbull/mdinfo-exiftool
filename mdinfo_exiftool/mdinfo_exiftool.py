@@ -69,7 +69,7 @@ def get_template_help() -> Iterable:
         ["Attribute", "Description"],
         *[[k, v] for k, v in DATETIME_ATTRIBUTES.items()],
     ]
-    return ["**Photo and Video Files**", fields, text, attributes]
+    return ["**Photo and video files (and other files supported by exiftool)**", fields, text, attributes]
 
 
 @mdinfo.hookimpl
