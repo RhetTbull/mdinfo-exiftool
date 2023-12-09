@@ -19,6 +19,13 @@ pip install mdinfo
 pip install mdinfo-exiftool
 ```
 
+Or if installed via pipx:
+
+```bash
+pipx install mdinfo
+pipx inject mdinfo mdinfo-exiftool
+```
+
 ## Template Help
 
 <!-- [[[cog
